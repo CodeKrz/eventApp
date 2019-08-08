@@ -1,0 +1,54 @@
+<div class="container" id="container">
+  <h3 class="rsvpLabel">RSVP Central</h3>
+  <h6 class="rsvpLabel2">Friendly Reminder, this is a kid free event.</h6>
+<form #userForm="ngForm"   (ngSubmit)="onSave(userForm.value)" novalidate>
+  <!-- <p>Is "myForm" valid? {{userForm.valid}}</p> -->
+<label>First Name</label><br>
+    <input name="id" type="hidden" [(ngModel)]="id" />
+     <input name="firstName" id="firstName" type="text" required [(ngModel)]="firstName"/><br>
+<label>Last Name</label><br>
+     <input name="lastName" id="lastName" type="text" required [(ngModel)]="lastName"/>
+<br>
+<label>Phone Number</label><br>
+        <input name="phoneNum" required type="text"[(ngModel)]="phoneNum" />
+        <br>
+    <label>Address</label><br>
+        <input name="address" id="address" required type="text"[(ngModel)]="address" />
+          <label>Attending?</label><br>
+          <input type="radio" class="radio"name="attending" value="true" [(ngModel)]="attending"> YES
+          <input type="radio" class="radio"name="attending" value="false">NO
+    <input class="btn btn-primary" type="submit" value="{{valbutton}}" />
+
+</form>
+</div>
+<h1  class="thanks">{{thanks}}  {{firstName}}!</h1>
+
+
+<app-footer></app-footer>
+
+
+
+
+<!-- below is for returning the data that had been entered. Should be in an admin console. -->
+<!-- <table border='1'>
+
+  <tr>
+    <td>Id</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Phone Number</td>
+    <td>Address</td>
+    <td>Edit</td>
+    <td>Delete</td>
+  </tr>
+  <tr *ngFor="let kk of Repdata;let ind = index">
+
+    <td>{{ind + 1}}</td>
+    <td>{{kk.firstName}}</td>
+    <td>{{kk.firstName}}</td>
+    <td>{{kk.phoneNum}}</td>
+    <td>{{kk.address}}</td>
+    <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>
+    <td><a (click)="delete(kk._id)" style="color:blueviolet">Delete</a>  </td>
+  </tr>
+</table> -->

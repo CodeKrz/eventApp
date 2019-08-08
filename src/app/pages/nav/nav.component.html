@@ -1,0 +1,33 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Event Planner</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li role="presentation" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item"routerLinkActive="router-link-active">
+          <a class="nav-link" [routerLink]="['/calendar']">Calendar</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="['/hotels']" routerLinkActive="router-link-active">Hotels</a>
+            <a class="dropdown-item" [routerLink]="['/food']" routerLinkActive="router-link-active">Food</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="['/toDo']" routerLinkActive="router-link-active">To Do</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" [routerLink]="['/gallery']" tabindex="-1" aria-disabled="true">Gallery</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>

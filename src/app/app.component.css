@@ -1,0 +1,12 @@
+h1{
+  margin-left: 40%;
+  margin-right: auto;
+  color: hotpink;
+  font-family: 'Courier New', Courier, monospace;
+  text-shadow: 1px 2px 2px black;
+}
+.container{
+  width: 90%;
+  height: 100%;
+}
+
