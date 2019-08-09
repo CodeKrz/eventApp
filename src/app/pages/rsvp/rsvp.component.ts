@@ -42,7 +42,7 @@ this.id = kk._id;
 this.firstName= kk.firstName;
 this.lastName= kk.lastName;
 this.phoneNum= kk.phoneNum;
-this.address= kk.address;
+this.email= kk.email;
 this.attending= kk.attending;
 this.valbutton ="Update";
 }

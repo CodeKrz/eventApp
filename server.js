@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
 var GuestSchema = new Schema({
  firstName: { type: String   },
  lastName: { type: String   },
- address: { type: String   },
+ email: { type: String   },
  phoneNum: { type: String   },
  attending: { type: Boolean }
 },{ versionKey: false });
@@ -51,7 +51,7 @@ app.post("/api/SaveGuest",function(req,res){
 }
 else
 {
- model.findByIdAndUpdate(req.body.id, { firstName: req.body.firstName, lastName: req.body.lastName, address: req.body.address, phoneNum: req.body.phoneNum, attending: req.body.attending},
+ model.findByIdAndUpdate(req.body.id, { firstName: req.body.firstName, lastName: req.body.lastName, email: req.body.email, phoneNum: req.body.phoneNum, attending: req.body.attending},
    function(err,data) {
    if (err) {
    res.send(err);

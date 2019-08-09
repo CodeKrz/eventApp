@@ -5,50 +5,54 @@
   <!-- <p>Is "myForm" valid? {{userForm.valid}}</p> -->
 <label>First Name</label><br>
     <input name="id" type="hidden" [(ngModel)]="id" />
-     <input name="firstName" id="firstName" type="text" required [(ngModel)]="firstName"/><br>
+     <input name="firstName" class="formControl item" id="firstName" type="text" [(ngModel)]="firstName" placeholder="What we will call you" required/><br>
 <label>Last Name</label><br>
-     <input name="lastName" id="lastName" type="text" required [(ngModel)]="lastName"/>
+     <input name="lastName" class="formControl item" id="lastName" type="text" [(ngModel)]="lastName" placeholder="Your surname" required/>
 <br>
 <label>Phone Number</label><br>
-        <input name="phoneNum" required type="text"[(ngModel)]="phoneNum" />
+        <input name="phoneNum" class="formControl item"  type="text"[(ngModel)]="phoneNum"placeholder="Put your digits here" required/>
         <br>
-    <label>Address</label><br>
-        <input name="address" id="address" required type="text"[(ngModel)]="address" />
+    <label>Email Address</label><br>
+        <input name="email" class="formControl item" id="email"  type="email"[(ngModel)]="email" placeholder="you@you.com" required/>
           <label>Attending?</label><br>
-          <input type="radio" class="radio"name="attending" value="true" [(ngModel)]="attending"> YES
-          <input type="radio" class="radio"name="attending" value="false">NO
+          <input type="radio" class="radio"name="attending" value="yes" [(ngModel)]="attending" > YES
+          <input type="radio" class="radio"name="attending" value="no" [(ngModel)]="attending" >NO
     <input class="btn btn-primary" type="submit" value="{{valbutton}}" />
 
 </form>
 </div>
-<h1  class="thanks">{{thanks}}  {{firstName}}!</h1>
+<p  class="thanks">{{thanks}}  {{firstName}}!<a class="btn btn-light btn-lg" [routerLink]="['/']" routerLinkActive="router-link-active" role="button">Exit</a>
+</p>
 
 
-<app-footer></app-footer>
+
 
 
 
 
 <!-- below is for returning the data that had been entered. Should be in an admin console. -->
-<!-- <table border='1'>
-
+<table>
+<h4>Guest List</h4>
   <tr>
-    <td>Id</td>
-    <td>First Name</td>
-    <td>Last Name</td>
-    <td>Phone Number</td>
-    <td>Address</td>
-    <td>Edit</td>
+    <td>Guest |</td>
+    <td>First Name |</td>
+    <td>Last Name |</td>
+    <td>Phone Number |</td>
+    <td>Email Address |</td>
+    <td>Attending </td>
+    <!-- <td>Edit |</td> -->
     <td>Delete</td>
   </tr>
   <tr *ngFor="let kk of Repdata;let ind = index">
 
-    <td>{{ind + 1}}</td>
+    <td>{{ind + 1 }}</td>
     <td>{{kk.firstName}}</td>
-    <td>{{kk.firstName}}</td>
-    <td>{{kk.phoneNum}}</td>
-    <td>{{kk.address}}</td>
-    <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>
-    <td><a (click)="delete(kk._id)" style="color:blueviolet">Delete</a>  </td>
+     <td>{{kk.lastName}} </td>
+    <td>{{kk.phoneNum}} </td>
+    <td>{{kk.email}} </td>
+    <td>{{kk.attending}} </td>
+    <!-- <td><a (click)="edit(kk)" style="color:rgb(85, 236, 229)">Edit</a></td> -->
+    <td><a (click)="delete(kk._id)" style="color: red">Delete</a>  </td>
   </tr>
-</table> -->
+</table>
+
