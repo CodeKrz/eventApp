@@ -8,24 +8,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li role="presentation" routerLinkActive="router-link-active" [routerLinkActiveOptions]="{exact:true}">
-          <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" [routerLink]="['/']">Home |<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item"routerLinkActive="router-link-active">
-          <a class="nav-link" [routerLink]="['/calendar']">Calendar</a>
+          <a class="nav-link" [routerLink]="['/calendar']">Calendar |</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
+            From out of town?
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" [routerLink]="['/hotels']" routerLinkActive="router-link-active">Hotels</a>
+            <a class="dropdown-item" [routerLink]="['/hotels']" routerLinkActive="router-link-active">Hotels </a>
             <a class="dropdown-item" [routerLink]="['/food']" routerLinkActive="router-link-active">Food</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" [routerLink]="['/toDo']" routerLinkActive="router-link-active">To Do</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" [routerLink]="['/gallery']" tabindex="-1" aria-disabled="true">Gallery</a>
+          <a class="nav-link disabled" [routerLink]="['/gallery']" tabindex="-1" aria-disabled="true">| Gallery</a>
         </li>
       </ul>
 
